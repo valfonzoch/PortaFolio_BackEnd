@@ -4,6 +4,8 @@ package com.Backend.Vanessa.service;
 import com.Backend.Vanessa.model.Certificaciones;
 import com.Backend.Vanessa.model.College;
 import com.Backend.Vanessa.model.Company;
+import com.Backend.Vanessa.model.Educacion;
+import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
 import com.Backend.Vanessa.repository.PersonaRepository;
 import java.util.List;
@@ -21,6 +23,10 @@ public class PersonaService  implements IPersonaService {
     public CollegeService coleServ;
     @Autowired
     public CertificacionesService certiServ;
+    @Autowired
+    public EducacionService eduServ;
+    @Autowired
+    public ExperienciaService expServ;
 
     @Override
     public List<Persona> verPersonas() {
@@ -58,6 +64,18 @@ public class PersonaService  implements IPersonaService {
     public void agregarCertificaciones(Certificaciones certi, Persona per) {
     Certificaciones certi_id = certiServ.crearCertificaciones(certi);
     per.addCertificaciones(certi_id);
+    persoRepo.save(per);
+    }
+    @Override
+    public void agregarEducacion(Educacion edu, Persona per) {
+    Educacion edu_id = eduServ.crearEducacion(edu);
+    per.addEducacion(edu_id);
+    persoRepo.save(per);
+    }
+    @Override
+    public void agregarExperiencia(Experiencia exp, Persona per) {
+    Experiencia exp_id = expServ.crearExperiencia(exp);
+    per.addExperiencia(exp_id);
     persoRepo.save(per);
     }
 }

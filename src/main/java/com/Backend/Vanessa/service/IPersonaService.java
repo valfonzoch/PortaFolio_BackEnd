@@ -4,6 +4,8 @@ package com.Backend.Vanessa.service;
 import com.Backend.Vanessa.model.Certificaciones;
 import com.Backend.Vanessa.model.College;
 import com.Backend.Vanessa.model.Company;
+import com.Backend.Vanessa.model.Educacion;
+import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
 import java.util.List;
 
@@ -17,6 +19,8 @@ public interface IPersonaService {
     public void agregarCompany (Company comp, Persona per);
     public void agregarCollege (College cole, Persona per);
     public void agregarCertificaciones (Certificaciones certi, Persona per);
+    public void agregarEducacion (Educacion edu, Persona per);
+    public void agregarExperiencia (Experiencia exp, Persona per);
     
     
     
