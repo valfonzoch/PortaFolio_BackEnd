@@ -1,6 +1,8 @@
 
 package com.Backend.Vanessa.Controller;
 
+import com.Backend.Vanessa.model.Certificaciones;
+import com.Backend.Vanessa.model.College;
 import com.Backend.Vanessa.model.Company;
 import com.Backend.Vanessa.model.Persona;
 import com.Backend.Vanessa.service.IPersonaService;
@@ -40,5 +42,13 @@ public class Controller {
     @PostMapping("new/company/{id}")
     public void crearCompany(@RequestBody Company com, @PathVariable Persona id){
       persoServ.agregarCompany(com, id);
+    }
+    @PostMapping("new/college/{id}")
+    public void crearCollege(@RequestBody College cole, @PathVariable Persona id){
+      persoServ.agregarCollege(cole, id);
+    }
+    @PostMapping("new/certificaciones/{id}")
+    public void crearCertificaciones(@RequestBody Certificaciones certi, @PathVariable Persona id){
+      persoServ.agregarCertificaciones(certi, id);
     }
 }

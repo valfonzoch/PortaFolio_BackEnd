@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ICertificacionesService {
    public List<Certificaciones> verCertificaciones ();
-    public void crearCertificaciones (Certificaciones certi);
+    public Certificaciones crearCertificaciones (Certificaciones certi);
     public void borrarCertificaciones (Long id);
     public Certificaciones buscarCertificaciones (Long id);  
 }

@@ -24,8 +24,7 @@ public class CompanyController {
     
     @PostMapping ("/new/Company")
     public void agregarCompany (@RequestBody Company comp){
-       compServ.crearCompany(comp);
-       
+       compServ.crearCompany(comp);   
     }
     
     @GetMapping ("/ver/Company")

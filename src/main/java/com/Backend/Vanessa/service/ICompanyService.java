@@ -7,6 +7,7 @@ import java.util.List;
 
 
 public interface ICompanyService {
+    
     public List<Company> verCompany ();
     public Company crearCompany (Company comp);
     public void borrarCompany (Long id);

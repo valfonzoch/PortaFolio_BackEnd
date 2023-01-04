@@ -20,8 +20,8 @@ public class CertificacionesService implements ICertificacionesService {
     }
 
     @Override
-    public void crearCertificaciones(Certificaciones certi) {
-        certiRepo.save(certi);
+    public Certificaciones crearCertificaciones(Certificaciones certi) {
+       return certiRepo.save(certi);
     }
 
     @Override

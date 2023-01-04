@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CollegeService implements ICollegeService {
+    
     @Autowired 
     public CollegeRepository coleRepo; 
     
@@ -18,8 +19,8 @@ public class CollegeService implements ICollegeService {
     }
 
     @Override
-    public void crearCollege(College cole) {
-        coleRepo.save(cole);
+    public College crearCollege(College cole) {
+       return coleRepo.save(cole);
     }
 
     @Override
