@@ -18,9 +18,10 @@ public interface IPersonaService {
     public Persona buscarPersona (Long id); 
     public void agregarCompany (Company comp, Persona per);
     public void agregarCollege (College cole, Persona per);
-    public void agregarCertificaciones (Certificaciones certi, Persona per);
+    public void agregarCertificaciones (Certificaciones cer, Persona per);
     public void agregarEducacion (Educacion edu, Persona per);
     public void agregarExperiencia (Experiencia exp, Persona per);
+    
     
     
     

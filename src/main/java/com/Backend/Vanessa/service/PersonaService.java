@@ -21,12 +21,13 @@ public class PersonaService  implements IPersonaService {
     public CompanyService compServ;
     @Autowired
     public CollegeService coleServ;
-    @Autowired
-    public CertificacionesService certiServ;
+   
     @Autowired
     public EducacionService eduServ;
     @Autowired
     public ExperienciaService expServ;
+    @Autowired
+    public CertificacionesService cerServ;
 
     @Override
     public List<Persona> verPersonas() {
@@ -61,9 +62,9 @@ public class PersonaService  implements IPersonaService {
     persoRepo.save(per);
     }
     @Override
-    public void agregarCertificaciones(Certificaciones certi, Persona per) {
-    Certificaciones certi_id = certiServ.crearCertificaciones(certi);
-    per.addCertificaciones(certi_id);
+    public void agregarCertificaciones(Certificaciones cer, Persona per) {
+    Certificaciones cer_id = cerServ.crearCertificaciones(cer);
+    per.addCertificaciones(cer_id);
     persoRepo.save(per);
     }
     @Override
@@ -78,4 +79,5 @@ public class PersonaService  implements IPersonaService {
     per.addExperiencia(exp_id);
     persoRepo.save(per);
     }
+   
 }
