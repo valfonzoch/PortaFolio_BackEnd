@@ -2,8 +2,6 @@
 package com.Backend.Vanessa.service;
 
 import com.Backend.Vanessa.model.Certificaciones;
-import com.Backend.Vanessa.model.College;
-import com.Backend.Vanessa.model.Company;
 import com.Backend.Vanessa.model.Educacion;
 import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
@@ -16,8 +14,6 @@ public interface IPersonaService {
     public void crearPersona (Persona per);
     public void borrarPersona (Long id);
     public Persona buscarPersona (Long id); 
-    public void agregarCompany (Company comp, Persona per);
-    public void agregarCollege (College cole, Persona per);
     public void agregarCertificaciones (Certificaciones cer, Persona per);
     public void agregarEducacion (Educacion edu, Persona per);
     public void agregarExperiencia (Experiencia exp, Persona per);

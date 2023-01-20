@@ -21,20 +21,16 @@ public class Persona {
     private String name;
     private String backImagen;
     private String imagen;
-    private String position;  
+    private String position; 
+    private String company; 
+    private String college; 
     private String location;
     private String title1;
     private String about;
     private String title2;
     private String email;
     private String password;
-    
-    @OneToMany
-    List<Company> listCompany;
-    
-    @OneToMany
-    List<College> listCollege;
-    
+        
     @OneToMany
     List<Experiencia> listExperiencia;
     
@@ -48,12 +44,14 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(Long id, String name, String backImagen, String imagen, String position, String location, String title1, String about, String title2, String email, String password) {
+    public Persona(Long id, String name, String backImagen, String imagen, String position, String company, String college, String location, String title1, String about, String title2, String email, String password) {
         this.id = id;
         this.name = name;
         this.backImagen = backImagen;
         this.imagen = imagen;
         this.position = position;
+        this.company = company;
+        this.college = college;
         this.location = location;
         this.title1 = title1;
         this.about = about;
@@ -62,12 +60,6 @@ public class Persona {
         this.password = password;
     }
     
-        public void addCompany (Company comp){
-            this.listCompany.add(comp);
-        }
-        public void addCollege (College cole){
-            this.listCollege.add(cole);
-        }
         public void addExperiencia (Experiencia exp){
             this.listExperiencia.add(exp);
         }

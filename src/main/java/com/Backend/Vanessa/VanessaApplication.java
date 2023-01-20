@@ -14,7 +14,7 @@ public class VanessaApplication {
     }
 
 //configurando el cors para la conexion con angular
-    @Bean
+   @Bean
 
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
