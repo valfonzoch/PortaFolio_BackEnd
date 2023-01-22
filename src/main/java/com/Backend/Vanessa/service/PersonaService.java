@@ -6,6 +6,7 @@ import com.Backend.Vanessa.model.Certificaciones;
 import com.Backend.Vanessa.model.Educacion;
 import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
+
 import com.Backend.Vanessa.repository.PersonaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +24,7 @@ public class PersonaService  implements IPersonaService {
     @Autowired
     public CertificacionesService cerServ;
 
-    @Override
-    public List<Persona> verPersonas() {
-        return persoRepo.findAll();
-    }
+   
 
     @Override
     public void crearPersona(Persona per) {
@@ -43,6 +41,12 @@ public class PersonaService  implements IPersonaService {
         return persoRepo.findById(id).orElse(null);
     }
     
+   @Override
+    public void agregarEducacion(Educacion edu, Persona per) {
+    Educacion edu_id = eduServ.crearEducacion(edu);
+    per.addEducacion(edu_id);
+    persoRepo.save(per);
+    }
    
     @Override
     public void agregarCertificaciones(Certificaciones cer, Persona per) {
@@ -50,12 +54,7 @@ public class PersonaService  implements IPersonaService {
     per.addCertificaciones(cer_id);
     persoRepo.save(per);
     }
-    @Override
-    public void agregarEducacion(Educacion edu, Persona per) {
-    Educacion edu_id = eduServ.crearEducacion(edu);
-    per.addEducacion(edu_id);
-    persoRepo.save(per);
-    }
+    
     @Override
     public void agregarExperiencia(Experiencia exp, Persona per) {
     Experiencia exp_id = expServ.crearExperiencia(exp);

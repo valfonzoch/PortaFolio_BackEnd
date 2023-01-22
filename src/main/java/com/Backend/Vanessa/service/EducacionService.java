@@ -25,7 +25,7 @@ public class EducacionService implements IEducacionService {
 
     @Override
     public void borrarEduaccion(Long id) {
-       EduRepo.deleteById(id);
+      EduRepo.deleteById(id);   //lo necesito publico para que persona lo llame//
     }
 
     @Override
@@ -33,4 +33,9 @@ public class EducacionService implements IEducacionService {
        return EduRepo.findById(id).orElse(null);
     }
     
+    @Override
+    public void editarEducacion(Educacion edu){
+        EduRepo.save(edu);
+    }
+     
 }
