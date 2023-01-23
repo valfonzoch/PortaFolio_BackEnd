@@ -10,4 +10,5 @@ public interface ICertificacionesService {
     public Certificaciones crearCertificaciones (Certificaciones cer);
     public void borrarCertificaciones (Long id);
     public Certificaciones buscarCertificaciones (Long id);  
+    public void editarCertificaciones (Certificaciones cer);
 }

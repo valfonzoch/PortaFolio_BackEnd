@@ -19,22 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class CertificacionesController {
     @Autowired
     private ICertificacionesService cerServ; 
-    
-    @PostMapping ("/new/Certificacion")
-    public void agregarCertificacion (@RequestBody Certificaciones cer){
-       cerServ.crearCertificaciones(cer);
-    }
+
     
     @GetMapping ("/ver/Certificaciones")
     @ResponseBody
     public List<Certificaciones> verCertificacion (){
      return cerServ.verCertificaciones();
     }
-    
-    @DeleteMapping ("/delete/{id}")
-    public void borrarCertificaciones (@PathVariable Long id){
-          cerServ.borrarCertificaciones(id);
-        }
     
 }
 

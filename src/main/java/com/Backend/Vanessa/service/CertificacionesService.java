@@ -20,8 +20,8 @@ public class CertificacionesService implements ICertificacionesService {
     }
 
     @Override
-    public Certificaciones crearCertificaciones(Certificaciones certi) {
-       return certiRepo.save(certi);
+    public Certificaciones crearCertificaciones(Certificaciones cer) {
+       return certiRepo.save(cer);
     }
 
     @Override
@@ -33,5 +33,8 @@ public class CertificacionesService implements ICertificacionesService {
     public Certificaciones buscarCertificaciones(Long id) {
         return certiRepo.findById(id).orElse(null);
     }
-    
+    @Override
+    public void editarCertificaciones (Certificaciones cer){
+        certiRepo.save(cer);
+    }
 }

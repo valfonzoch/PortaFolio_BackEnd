@@ -16,25 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/experiencia")
-public class ExperienciaController {
+public class ExperienciaController
+{
      @Autowired
     private IExperienciaService expServ; 
-     
-     @PostMapping ("/new/Experiencia")
-    public void agregarExperiencia (@RequestBody Experiencia exp){
-       expServ.crearExperiencia(exp);
-    }
-    
+
     @GetMapping ("/ver/Experiencia")
     @ResponseBody
     public List<Experiencia> verExperiencia (){
      return expServ.verExperiencia();
     }
-    
-    @DeleteMapping ("/delete/{id}")
-    public void borrarExperiencia (@PathVariable Long id){
-          expServ.borrarExperiencia(id);
-        }
-    
+  
 }
 

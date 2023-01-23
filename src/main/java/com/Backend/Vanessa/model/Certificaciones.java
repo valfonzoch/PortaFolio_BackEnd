@@ -1,7 +1,7 @@
 
 package com.Backend.Vanessa.model;
 
-import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,16 +18,18 @@ public class Certificaciones {
      
     private String school;
     private String img;
+    private String title;
     private String expedition;
     private String certificate; 
 
     public Certificaciones() {
     }
 
-    public Certificaciones(Long id, String school, String img, String expedition, String certificate) {
+    public Certificaciones(Long id, String school, String img, String title, String expedition, String certificate) {
         this.id = id;
         this.school = school;
         this.img = img;
+        this.title = title;
         this.expedition = expedition;
         this.certificate = certificate;
     }

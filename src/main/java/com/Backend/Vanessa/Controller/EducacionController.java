@@ -21,16 +21,11 @@ public class EducacionController {
     
     @Autowired
     private IEducacionService eduServ; 
-    
-   
-    
+ 
     @GetMapping ("/ver/educacion")
     @ResponseBody
     public List<Educacion> verEducacion (){
      return eduServ.verEducacion();
     }
-    
-   
-    
-   
+
 }
