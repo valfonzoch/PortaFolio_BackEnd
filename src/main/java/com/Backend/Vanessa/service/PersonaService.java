@@ -2,13 +2,10 @@
 package com.Backend.Vanessa.service;
 
 import com.Backend.Vanessa.model.Certificaciones;
-
 import com.Backend.Vanessa.model.Educacion;
 import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
-
 import com.Backend.Vanessa.repository.PersonaRepository;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

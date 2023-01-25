@@ -62,8 +62,8 @@ public class Controller {
     eduServ.borrarEduaccion(id);
     }
     @GetMapping("/ver/educacion/{id}")
-    public void verEducacion (@PathVariable Long id){
-        eduServ.buscarEducacion(id);
+    public Educacion buscarEducacion (@PathVariable Long id){
+        return eduServ.buscarEducacion(id);
     }
     
    
@@ -82,8 +82,8 @@ public class Controller {
     expServ.borrarExperiencia(id);
     }
     @GetMapping("/ver/experiencia/{id}")
-    public void verExperiencia (@PathVariable Long id){
-        expServ.buscarExperiencia(id);
+    public Experiencia buscarExperiencia (@PathVariable Long id){
+       return expServ.buscarExperiencia(id);
     }
     
     
@@ -103,8 +103,8 @@ public class Controller {
         cerServ.borrarCertificaciones(id);
     }
     @GetMapping("/ver/certificaciones/{id}")
-    public void verCertificaciones (@PathVariable Long id){
-        cerServ.buscarCertificaciones(id);
+    public Certificaciones buscarCertificaciones (@PathVariable Long id){
+       return  cerServ.buscarCertificaciones(id);
     }
     
 }
