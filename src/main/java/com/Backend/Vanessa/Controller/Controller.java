@@ -8,9 +8,7 @@ import com.Backend.Vanessa.model.Persona;
 import com.Backend.Vanessa.service.ICertificacionesService;
 import com.Backend.Vanessa.service.IEducacionService;
 import com.Backend.Vanessa.service.IExperienciaService;
-
 import com.Backend.Vanessa.service.IPersonaService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,6 +44,9 @@ public class Controller {
     public void borrarPersona (@PathVariable Long id){
           persoServ.borrarPersona(id);
         }
+    @PutMapping("update/persona")
+    public void editarPersona (@RequestBody Persona per){
+    persoServ.editarPersona(per);}
     
     //me falta editar persona
     
@@ -94,7 +95,7 @@ public class Controller {
     public void crearCertificaciones(@RequestBody Certificaciones cer, @PathVariable Persona id){
       persoServ.agregarCertificaciones(cer, id);
     } 
-     @PutMapping ("update/certificaciones")
+    @PutMapping ("update/certificaciones")
     public void editarCertificaciones (@RequestBody Certificaciones cer){
         cerServ.editarCertificaciones(cer);
     }
