@@ -1,13 +1,10 @@
 
 package com.Backend.Vanessa.Controller;
 
-import com.Backend.Vanessa.model.AcercaDe;
 import com.Backend.Vanessa.model.Certificaciones;
 import com.Backend.Vanessa.model.Educacion;
 import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
-
-import com.Backend.Vanessa.service.IAcercaDeService;
 import com.Backend.Vanessa.service.ICertificacionesService;
 import com.Backend.Vanessa.service.IEducacionService;
 import com.Backend.Vanessa.service.IExperienciaService;
@@ -34,8 +31,7 @@ public class Controller {
     private IExperienciaService expServ;
     @Autowired
     private ICertificacionesService cerServ;
-    @Autowired
-    private IAcercaDeService acerServ;
+   
     
     
     //Persona
@@ -55,24 +51,6 @@ public class Controller {
     public void borrarPersona (@PathVariable Long id){
           persoServ.borrarPersona(id);
     }
-    
-   /* //AcercaDe
-   @PostMapping ("/new/acercaDe")
-    public void agregarAcercaDe(@RequestBody AcercaDe acer, @PathVariable Persona id){
-         acerServ.crearAcercaDe(acer);
-    }
-    @GetMapping("/ver/acercaDe/{id}")
-    public AcercaDe BuscarAcercaDe (@PathVariable Long id){
-    return acerServ.buscarAcercaDe(id);
-    }
-   @PutMapping("update/acercaDe")
-   public void editarAcercaDe (@RequestBody AcercaDe acer){
-        acerServ.editarAcercaDe(acer);
-   }
-   @DeleteMapping ("delete/acercaDe/{id}")
-   public void borrarAcercaDe (@PathVariable Long id){
-       acerServ.borrarAcercaDe(id);
-   }*/
     
    //Educacion
     @PostMapping("new/educacion/{id}")
