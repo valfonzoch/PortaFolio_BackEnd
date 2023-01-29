@@ -59,7 +59,7 @@ public class Persona {
         this.email = email;
         this.password = password;
     }
-    
+        
         public void addExperiencia (Experiencia exp){
             this.listExperiencia.add(exp);
         }

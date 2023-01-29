@@ -1,6 +1,5 @@
 
 package com.Backend.Vanessa.service;
-
 import com.Backend.Vanessa.model.Certificaciones;
 import com.Backend.Vanessa.repository.CertificacionRepository;
 import java.util.List;

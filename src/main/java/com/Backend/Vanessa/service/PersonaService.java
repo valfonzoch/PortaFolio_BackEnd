@@ -1,6 +1,7 @@
 
 package com.Backend.Vanessa.service;
 
+
 import com.Backend.Vanessa.model.Certificaciones;
 import com.Backend.Vanessa.model.Educacion;
 import com.Backend.Vanessa.model.Experiencia;
@@ -20,6 +21,7 @@ public class PersonaService  implements IPersonaService {
     public ExperienciaService expServ;
     @Autowired
     public CertificacionesService cerServ;
+    
 
    
 
@@ -42,6 +44,7 @@ public class PersonaService  implements IPersonaService {
     public void editarPersona (Persona per){
          persoRepo.save(per);
     }
+    
     
    @Override
     public void agregarEducacion(Educacion edu, Persona per) {
