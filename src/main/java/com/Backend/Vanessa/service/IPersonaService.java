@@ -23,6 +23,6 @@ public interface IPersonaService {
     public void agregarExperiencia (Experiencia exp, Persona per);
     
     
-    
+    public void borrarExperiencia (Experiencia idexp, Persona idper);
     
 }

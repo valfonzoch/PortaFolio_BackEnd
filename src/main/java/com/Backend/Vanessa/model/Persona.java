@@ -70,4 +70,52 @@ public class Persona {
             this.listCertificaciones.add(cert);
         }
         
+        public void deleteExperiencia (Experiencia exp){
+            
+            for(Experiencia aux : this.listExperiencia ){
+            if(aux.equals(exp)){
+                this.listExperiencia.remove(exp);
+                break;
+            }
+            
+            }
+            
+        }
+        
+        
+        
+        
+     /*   
+        public void removerExperiencia(Experiencia var){
+        
+        for(Experiencia aux : this.listaExperiencia ){
+            if(aux.equals(var)){
+                this.listaExperiencia.remove(var);
+                break;
+            }
+        }
+    }
+        
+        
+        
+        public boolean equals(String user){
+    
+        return (this.usuario == null ? user == null : this.usuario.equals(user));
+        }
+    
+        public boolean igual(String clave){
+    
+        return (this.password == null ? password == null : this.password.equalsIgnoreCase(clave));
+        }
+        
+        public boolean equals(String user){
+    
+       return (this.usuario == null ? user == null : this.usuario.equals(user));
+        }
+    
+        public boolean igual(String clave){
+    
+       return (this.password == null ? password == null : this.password.equalsIgnoreCase(clave));
+    }*/
+        
 }

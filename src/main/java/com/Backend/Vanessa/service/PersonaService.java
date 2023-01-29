@@ -6,7 +6,9 @@ import com.Backend.Vanessa.model.Certificaciones;
 import com.Backend.Vanessa.model.Educacion;
 import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
+
 import com.Backend.Vanessa.repository.PersonaRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,7 @@ public class PersonaService  implements IPersonaService {
     public ExperienciaService expServ;
     @Autowired
     public CertificacionesService cerServ;
+   
     
 
    
@@ -67,4 +70,23 @@ public class PersonaService  implements IPersonaService {
     persoRepo.save(per);
     }
    
+    @Override
+    public void borrarExperiencia( Experiencia exp, Persona per){
+        
+        per.deleteExperiencia(exp);
+        persoRepo.save(per);
+        expServ.borrarExperiencia(exp);
+   
+    
+    }
 }
+
+
+/*@Override
+    public void quitarEducacion(Educacion edu,Persona per) {
+        
+        per.removerEducacion(edu);
+        persoRepo.save(per);
+        eduServ.eliminarEducacion(edu);
+        
+    }*/

@@ -42,4 +42,9 @@ public class Experiencia {
         this.funciones = funciones;
     }
     
+     public boolean equals(Experiencia exp){
+        return this.getId().equals(exp.getId());
+    }
+    
 }
+/*getId() == exp.getId();*/

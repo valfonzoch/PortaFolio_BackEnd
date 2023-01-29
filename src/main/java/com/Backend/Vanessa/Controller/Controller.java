@@ -83,17 +83,22 @@ public class Controller {
     public void editarExperiencia (@RequestBody Experiencia exp){
       expServ.editarExperiencia(exp);
     }
-    @DeleteMapping ("delete/experiencia/{id}")
-    public void borrarExperiencia(@PathVariable Long id){
-    expServ.borrarExperiencia(id);
+    @DeleteMapping ("delete/experiencia/{idexp}/{idper}")
+    public void borrarExperiencia(@PathVariable Experiencia idexp, @PathVariable Persona idper){
+        persoServ.borrarExperiencia(idexp,idper);
     }
+    
+    /*@DeleteMapping("/eliminar/educacion/{ideducacion}/{idpersona}")
+     public void quitarEducacion(@PathVariable Educacion ideducacion,@PathVariable Persona idpersona){
+        perso.quitarEducacion(ideducacion,idpersona);
+    }*/
    
     //Certificaciones
     @PostMapping("new/certificaciones/{id}")
     public void crearCertificaciones(@RequestBody Certificaciones cer, @PathVariable Persona id){
       persoServ.agregarCertificaciones(cer, id);
     } 
-     @GetMapping("/ver/certificaciones/{id}")
+    @GetMapping("/ver/certificaciones/{id}")
     public Certificaciones buscarCertificaciones (@PathVariable Long id){
        return  cerServ.buscarCertificaciones(id);
     }
@@ -107,3 +112,5 @@ public class Controller {
     }
     
 }
+
+
