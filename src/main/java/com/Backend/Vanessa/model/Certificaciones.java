@@ -33,5 +33,9 @@ public class Certificaciones {
         this.expedition = expedition;
         this.certificate = certificate;
     }
+    
+    public boolean equals(Certificaciones cer){
+        return this.getId().equals(cer.getId());
+    }
  
 }

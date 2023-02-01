@@ -81,41 +81,28 @@ public class Persona {
             }
             
         }
-        
-        
-        
-        
-     /*   
-        public void removerExperiencia(Experiencia var){
-        
-        for(Experiencia aux : this.listaExperiencia ){
-            if(aux.equals(var)){
-                this.listaExperiencia.remove(var);
+         public void deleteEducacion (Educacion edu){
+            
+            for(Educacion aux : this.listEducacion ){
+            if(aux.equals(edu)){
+                this.listEducacion.remove(edu);
                 break;
             }
+            
+            }
+            
         }
-    }
-        
-        
-        
-        public boolean equals(String user){
-    
-        return (this.usuario == null ? user == null : this.usuario.equals(user));
-        }
-    
-        public boolean igual(String clave){
-    
-        return (this.password == null ? password == null : this.password.equalsIgnoreCase(clave));
+        public void deleteCertificaciones (Certificaciones cer){
+            
+            for(Certificaciones aux : this.listCertificaciones ){
+            if(aux.equals(cer)){
+                this.listCertificaciones.remove(cer);
+                break;
+            }
+            
+            }
         }
         
-        public boolean equals(String user){
-    
-       return (this.usuario == null ? user == null : this.usuario.equals(user));
-        }
-    
-        public boolean igual(String clave){
-    
-       return (this.password == null ? password == null : this.password.equalsIgnoreCase(clave));
-    }*/
+     
         
 }

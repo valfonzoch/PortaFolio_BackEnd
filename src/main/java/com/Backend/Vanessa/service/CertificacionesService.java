@@ -24,8 +24,8 @@ public class CertificacionesService implements ICertificacionesService {
     }
 
     @Override
-    public void borrarCertificaciones(Long id) {
-        certiRepo.deleteById (id);
+    public void borrarCertificaciones(Certificaciones id) {
+        certiRepo.delete(id);
     }
 
     @Override

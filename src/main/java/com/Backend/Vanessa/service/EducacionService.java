@@ -23,8 +23,8 @@ public class EducacionService implements IEducacionService {
     }
 
     @Override
-    public void borrarEduaccion(Long id) {
-      EduRepo.deleteById(id);   //lo necesito publico para que persona lo llame//
+    public void borrarEduaccion(Educacion id) {
+      EduRepo.delete(id);   //lo necesito publico para que persona lo llame//
     }
 
     @Override
@@ -38,3 +38,4 @@ public class EducacionService implements IEducacionService {
     }
      
 }
+

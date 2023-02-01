@@ -76,17 +76,23 @@ public class PersonaService  implements IPersonaService {
         per.deleteExperiencia(exp);
         persoRepo.save(per);
         expServ.borrarExperiencia(exp);
-   
+    }
     
+    @Override
+    public void borrarEducacion( Educacion edu, Persona per){
+        
+        per.deleteEducacion(edu);
+        persoRepo.save(per);
+        eduServ.borrarEduaccion(edu);
+    }
+    
+     @Override
+    public void borrarCertificaciones( Certificaciones cer, Persona per){
+        
+        per.deleteCertificaciones(cer);
+        persoRepo.save(per);
+        cerServ.borrarCertificaciones(cer);
     }
 }
 
 
-/*@Override
-    public void quitarEducacion(Educacion edu,Persona per) {
-        
-        per.removerEducacion(edu);
-        persoRepo.save(per);
-        eduServ.eliminarEducacion(edu);
-        
-    }*/

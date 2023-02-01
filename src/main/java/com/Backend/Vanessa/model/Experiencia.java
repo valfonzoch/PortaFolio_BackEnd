@@ -47,4 +47,3 @@ public class Experiencia {
     }
     
 }
-/*getId() == exp.getId();*/

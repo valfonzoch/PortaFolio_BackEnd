@@ -35,6 +35,10 @@ public class Educacion {
         this.description = description;
         this.certificate = certificate;
     }
+    
+    public boolean equals(Educacion edu){
+        return this.getId().equals(edu.getId());
+    }
        
 }
 

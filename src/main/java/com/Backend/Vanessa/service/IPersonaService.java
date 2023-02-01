@@ -24,5 +24,7 @@ public interface IPersonaService {
     
     
     public void borrarExperiencia (Experiencia idexp, Persona idper);
+    public void borrarEducacion (Educacion idedu, Persona idper);
+    public void borrarCertificaciones (Certificaciones idcer, Persona idper);
     
 }
