@@ -24,8 +24,11 @@ public class PersonaService  implements IPersonaService {
     @Autowired
     public CertificacionesService cerServ;
    
-    
-
+    @Override 
+    public Boolean login (String password, String email){
+    Boolean response = persoRepo.existsByPasswordAndEmail(password, email);
+    return response;
+    }
    
 
     @Override

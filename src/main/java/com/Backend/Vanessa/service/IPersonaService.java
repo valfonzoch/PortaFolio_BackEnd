@@ -11,7 +11,8 @@ import com.Backend.Vanessa.model.Persona;
 
 public interface IPersonaService {
     
-   
+    public Boolean login (String password, String email);
+    
     public void crearPersona (Persona per);
     public void borrarPersona (Long id);
     public Persona buscarPersona (Long id); 

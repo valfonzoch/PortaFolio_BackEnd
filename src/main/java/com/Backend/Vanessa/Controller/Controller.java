@@ -2,6 +2,7 @@
 package com.Backend.Vanessa.Controller;
 
 import com.Backend.Vanessa.model.Certificaciones;
+import com.Backend.Vanessa.model.Credenciales;
 import com.Backend.Vanessa.model.Educacion;
 import com.Backend.Vanessa.model.Experiencia;
 import com.Backend.Vanessa.model.Persona;
@@ -32,6 +33,11 @@ public class Controller {
     @Autowired
     private ICertificacionesService cerServ;
    
+    //Login
+    @PostMapping("/login")
+    public Boolean login (@RequestBody Credenciales cred){
+    return persoServ.login(cred.getPassword(), cred.getEmail());
+    }
     
     
     //Persona
