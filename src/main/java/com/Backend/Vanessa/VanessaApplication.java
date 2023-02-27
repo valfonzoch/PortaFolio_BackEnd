@@ -24,8 +24,6 @@ public class VanessaApplication {
             }
         };
     }
-    
-
 }
 
 //Pra pruebas http://localhost:4200     
