@@ -20,7 +20,7 @@ public class VanessaApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("*").allowedHeaders("*");
+                registry.addMapping("/**").allowedOrigins("Hosting URL: https://frontendvanessa.web.app").allowedMethods("*").allowedHeaders("*");
             }
         };
     }
@@ -28,4 +28,4 @@ public class VanessaApplication {
 
 }
 
-        
+//Pra pruebas http://localhost:4200     
