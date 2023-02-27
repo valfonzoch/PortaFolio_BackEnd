@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.Backend.Vanessa.VanessaApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 76.195 s - in com.Backend.Vanessa.VanessaApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 78.144 s - in com.Backend.Vanessa.VanessaApplicationTests
