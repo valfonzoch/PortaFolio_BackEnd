@@ -49,7 +49,7 @@ public class Controller {
      public Persona buscarPersona(@PathVariable Long id) {
         return persoServ.buscarPersona(id);
     } 
-    @PutMapping("update/persona")
+    @PutMapping("/update/persona")
     public void editarPersona (@RequestBody Persona per){
     persoServ.editarPersona(per);
     }
@@ -59,7 +59,7 @@ public class Controller {
     }
     
    //Educacion
-    @PostMapping("new/educacion/{id}")
+    @PostMapping("/new/educacion/{id}")
     public void crearEducacion(@RequestBody Educacion edu, @PathVariable Persona id){
       persoServ.agregarEducacion(edu, id); 
     } 
@@ -67,17 +67,17 @@ public class Controller {
     public Educacion buscarEducacion (@PathVariable Long id){
         return eduServ.buscarEducacion(id);
     }
-    @PutMapping ("update/educacion")
+    @PutMapping ("/update/educacion")
     public void editarEducacion (@RequestBody Educacion edu){
       eduServ.editarEducacion(edu);
     }
-    @DeleteMapping ("delete/educacion/{idedu}/{idper}")
+    @DeleteMapping ("/delete/educacion/{idedu}/{idper}")
     public void borrarEducacion(@PathVariable Educacion idedu, @PathVariable Persona idper){
         persoServ.borrarEducacion(idedu,idper);
     }
     
    //Experiecia
-    @PostMapping("new/experiencia/{id}")
+    @PostMapping("/new/experiencia/{id}")
     public void crearExperiencia(@RequestBody Experiencia exp, @PathVariable Persona id){
       persoServ.agregarExperiencia(exp, id);
     } 
@@ -85,18 +85,18 @@ public class Controller {
     public Experiencia buscarExperiencia (@PathVariable Long id){
        return expServ.buscarExperiencia(id);
     }
-    @PutMapping ("update/experiencia")
+    @PutMapping ("/update/experiencia")
     public void editarExperiencia (@RequestBody Experiencia exp){
       expServ.editarExperiencia(exp);
     }
-    @DeleteMapping ("delete/experiencia/{idexp}/{idper}")
+    @DeleteMapping ("/delete/experiencia/{idexp}/{idper}")
     public void borrarExperiencia(@PathVariable Experiencia idexp, @PathVariable Persona idper){
         persoServ.borrarExperiencia(idexp,idper);
     }
     
    
     //Certificaciones
-    @PostMapping("new/certificaciones/{id}")
+    @PostMapping("/new/certificaciones/{id}")
     public void crearCertificaciones(@RequestBody Certificaciones cer, @PathVariable Persona id){
       persoServ.agregarCertificaciones(cer, id);
     } 
@@ -104,11 +104,11 @@ public class Controller {
     public Certificaciones buscarCertificaciones (@PathVariable Long id){
        return  cerServ.buscarCertificaciones(id);
     }
-    @PutMapping ("update/certificaciones")
+    @PutMapping ("/update/certificaciones")
     public void editarCertificaciones (@RequestBody Certificaciones cer){
         cerServ.editarCertificaciones(cer);
     }
-    @DeleteMapping ("delete/certificaciones/{idcer}/{idper}")
+    @DeleteMapping ("/delete/certificaciones/{idcer}/{idper}")
     public void borrarCertificaciones(@PathVariable Certificaciones idcer, @PathVariable Persona idper){
         persoServ.borrarCertificaciones(idcer,idper);
     }
